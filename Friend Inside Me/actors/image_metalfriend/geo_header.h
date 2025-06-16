@@ -1,0 +1,14 @@
+extern const GeoLayout image_metalfriend_Normal_Cap_State_Switch_opt1[];
+extern const GeoLayout image_metalfriend_Normal_Cap_State_Switch_opt2[];
+extern const GeoLayout image_metalfriend_Normal_Cap_State_Switch_opt3[];
+extern const GeoLayout image_metalfriend_geo[];
+extern u8 image_metalfriend_metal_friend_i8[];
+extern u8 image_metalfriend_Metal_Shade_rgba16_rgba16[];
+extern Vtx image_metalfriend_Normal_Cap_DL_mesh_layer_1_vtx_0[8];
+extern Gfx image_metalfriend_Normal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_image_metalfriend_Cut_Out_Cap__Needed_for_recoloring___CAP_[];
+extern Gfx mat_revert_image_metalfriend_Cut_Out_Cap__Needed_for_recoloring___CAP_[];
+extern Gfx mat_image_metalfriend_Metal__METAL_[];
+extern Gfx mat_revert_image_metalfriend_Metal__METAL_[];
+extern Gfx image_metalfriend_Normal_Cap_DL_mesh_layer_1[];
+extern Gfx image_metalfriend_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0[];

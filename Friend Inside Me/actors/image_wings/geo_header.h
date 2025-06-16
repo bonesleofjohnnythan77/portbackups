@@ -1,0 +1,14 @@
+extern const GeoLayout image_wings_Normal_Cap_State_Switch_opt1[];
+extern const GeoLayout image_wings_Normal_Cap_State_Switch_opt2[];
+extern const GeoLayout image_wings_Normal_Cap_State_Switch_opt3[];
+extern const GeoLayout image_wings_geo[];
+extern u8 image_wings_image_wings_rgba16[];
+extern u8 image_wings_Metal_Shade_rgba16_rgba16[];
+extern Vtx image_wings_Normal_Cap_DL_mesh_layer_4_vtx_0[8];
+extern Gfx image_wings_Normal_Cap_DL_mesh_layer_4_tri_0[];
+extern Gfx mat_image_wings_Cut_Out_Cap__Needed_for_recoloring___CAP_[];
+extern Gfx mat_revert_image_wings_Cut_Out_Cap__Needed_for_recoloring___CAP_[];
+extern Gfx mat_image_wings_Metal__METAL_[];
+extern Gfx mat_revert_image_wings_Metal__METAL_[];
+extern Gfx image_wings_Normal_Cap_DL_mesh_layer_4[];
+extern Gfx image_wings_Normal_Cap_DL_mesh_layer_4_mat_override_Metal__METAL__0[];
