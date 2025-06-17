@@ -1,0 +1,9 @@
+extern const GeoLayout bowlogloverball_geo[];
+extern Lights1 bowlogloverball_Fast3D_Material_011_lights;
+extern u8 bowlogloverball_custom_DL_0e0369d0_0xe034010_custom_rgba16_png_001_rgba16[];
+extern Vtx bowlogloverball_bowlogloverball_mesh_layer_1_vtx_cull[8];
+extern Vtx bowlogloverball_bowlogloverball_mesh_layer_1_vtx_0[201];
+extern Gfx bowlogloverball_bowlogloverball_mesh_layer_1_tri_0[];
+extern Gfx mat_bowlogloverball_Fast3D_Material_011[];
+extern Gfx mat_revert_bowlogloverball_Fast3D_Material_011[];
+extern Gfx bowlogloverball_bowlogloverball_mesh_layer_1[];

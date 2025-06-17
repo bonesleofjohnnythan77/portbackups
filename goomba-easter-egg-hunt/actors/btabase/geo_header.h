@@ -1,0 +1,9 @@
+extern const GeoLayout btabase_geo[];
+extern Lights1 btabase_Fast3D_Material_005_lights;
+extern u8 btabase_springboard_top_unused_rgba16_png_002_rgba16[];
+extern Vtx btabase_springboard_checkerboard_seg5_dl_05001900_mesh_mesh_layer_1_vtx_cull[8];
+extern Vtx btabase_springboard_checkerboard_seg5_dl_05001900_mesh_mesh_layer_1_vtx_0[34];
+extern Gfx btabase_springboard_checkerboard_seg5_dl_05001900_mesh_mesh_layer_1_tri_0[];
+extern Gfx mat_btabase_Fast3D_Material_005[];
+extern Gfx mat_revert_btabase_Fast3D_Material_005[];
+extern Gfx btabase_springboard_checkerboard_seg5_dl_05001900_mesh_mesh_layer_1[];
