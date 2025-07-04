@@ -1,5 +1,5 @@
 -- name: Luigi's Mansion 64 (Marce Ver.)
--- description: A very strange Luigi's Mansion 64, there is dialogue in Spanish.
+-- description: A very strange Luigi's Mansion 64 version created by Hacker Marce, there's a bit dialogue in Spanish.\n\n Many areas from the original game were altered among other odd changes, it is unknown when this hack was released but it is certainly old.\n\nAccording to RHDC there are 7 Possible Stars.\n\nPorted by B. Bones Johnson
 -- incompatible: romhack
 
 gLevelValues.entryLevel = LEVEL_TTM
