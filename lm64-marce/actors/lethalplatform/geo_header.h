@@ -1,0 +1,12 @@
+extern const GeoLayout lethalplatform_geo[];
+extern Lights1 lethalplatform_f3dlite_material_003_lights;
+extern Lights1 lethalplatform_f3dlite_material_004_lights;
+extern u8 lethalplatform__0900B800_rgba16[];
+extern u8 lethalplatform__09007800_rgba16[];
+extern Vtx lethalplatform_lethalplatform_mesh_layer_1_vtx_0[12];
+extern Gfx lethalplatform_lethalplatform_mesh_layer_1_tri_0[];
+extern Vtx lethalplatform_lethalplatform_mesh_layer_1_vtx_1[20];
+extern Gfx lethalplatform_lethalplatform_mesh_layer_1_tri_1[];
+extern Gfx mat_lethalplatform_f3dlite_material_003[];
+extern Gfx mat_lethalplatform_f3dlite_material_004[];
+extern Gfx lethalplatform_lethalplatform_mesh_layer_1[];

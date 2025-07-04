@@ -90,6 +90,8 @@ static const Gfx lll_seg7_dl_07016198[] = {
     gsSPEndDisplayList(),
 };
 
+
+
 // 0x07016250 - 0x070162E0
 const Gfx lll_seg7_dl_07016250[] = {
     gsDPPipeSync(),
