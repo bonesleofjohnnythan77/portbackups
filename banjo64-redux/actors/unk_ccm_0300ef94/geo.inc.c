@@ -1,0 +1,11 @@
+#include "custom.model.inc.h"
+const GeoLayout unk_DL_0300ef94[]= {
+GEO_CULLING_RADIUS(2600),
+GEO_OPEN_NODE(),
+GEO_SCALE(0,78643),
+GEO_OPEN_NODE(),
+GEO_DISPLAY_LIST(5,DL_unk_DL_0300ef94_0x300ee60),
+GEO_CLOSE_NODE(),
+GEO_CLOSE_NODE(),
+GEO_END(),
+};

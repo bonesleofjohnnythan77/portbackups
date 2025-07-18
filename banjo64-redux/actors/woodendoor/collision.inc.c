@@ -1,0 +1,22 @@
+const Collision woodendoor_collision[] = {
+	COL_INIT(),
+	COL_VERTEX_INIT(8),
+	COL_VERTEX(0, 112, 0),
+	COL_VERTEX(0, 240, 0),
+	COL_VERTEX(-108, 199, 0),
+	COL_VERTEX(108, 199, 0),
+	COL_VERTEX(151, 96, 0),
+	COL_VERTEX(125, 0, 0),
+	COL_VERTEX(-125, 0, 0),
+	COL_VERTEX(-151, 96, 0),
+	COL_TRI_INIT(SURFACE_DEFAULT, 7),
+	COL_TRI(0, 1, 2),
+	COL_TRI(1, 0, 3),
+	COL_TRI(3, 0, 4),
+	COL_TRI(0, 5, 4),
+	COL_TRI(6, 5, 0),
+	COL_TRI(6, 0, 7),
+	COL_TRI(0, 2, 7),
+	COL_TRI_STOP(),
+	COL_END()
+};

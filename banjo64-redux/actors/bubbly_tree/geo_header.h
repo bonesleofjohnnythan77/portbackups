@@ -1,0 +1,18 @@
+extern const GeoLayout bubbly_tree_geo[];
+extern u8 bubbly_tree_image_0000_rgba16[];
+extern u8 bubbly_tree_image_0002_rgba16[];
+extern u8 bubbly_tree_image_0001_rgba16[];
+extern Vtx bubbly_tree_000_displaylist_mesh_layer_1_vtx_0[18];
+extern Gfx bubbly_tree_000_displaylist_mesh_layer_1_tri_0[];
+extern Vtx bubbly_tree_000_displaylist_mesh_layer_1_vtx_1[22];
+extern Gfx bubbly_tree_000_displaylist_mesh_layer_1_tri_1[];
+extern Vtx bubbly_tree_000_displaylist_mesh_layer_4_vtx_0[30];
+extern Gfx bubbly_tree_000_displaylist_mesh_layer_4_tri_0[];
+extern Gfx mat_bubbly_tree_material_0000_f3d[];
+extern Gfx mat_revert_bubbly_tree_material_0000_f3d[];
+extern Gfx mat_bubbly_tree_material_0002_f3d[];
+extern Gfx mat_revert_bubbly_tree_material_0002_f3d[];
+extern Gfx mat_bubbly_tree_material_0003_f3d[];
+extern Gfx mat_revert_bubbly_tree_material_0003_f3d[];
+extern Gfx bubbly_tree_000_displaylist_mesh_layer_1[];
+extern Gfx bubbly_tree_000_displaylist_mesh_layer_4[];
