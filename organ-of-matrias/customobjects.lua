@@ -124,7 +124,7 @@ local function hex_platform_init(o)
 	o.oFlags = OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW
     obj_set_model_extended(o, E_MODEL_HEXPLATFORM)
 	o.collisionData = COL_HEXPLATFORM
-
+	network_init_object(o, false, nil)
 	o.oDrawingDistance = 19455
 
 end
