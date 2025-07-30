@@ -1,0 +1,12 @@
+extern const GeoLayout organ_button_geo[];
+extern u8 organ_button_rr_geo_000908_0x3032218_custom_rgba16_rgba16[];
+extern u8 organ_button_rr_geo_000660_0x7003738_custom_rgba16_rgba16[];
+extern Vtx organ_button_000_displaylist_mesh_layer_1_vtx_0[21];
+extern Gfx organ_button_000_displaylist_mesh_layer_1_tri_0[];
+extern Vtx organ_button_000_displaylist_mesh_layer_1_vtx_1[84];
+extern Gfx organ_button_000_displaylist_mesh_layer_1_tri_1[];
+extern Gfx mat_organ_button_wood[];
+extern Gfx mat_revert_organ_button_wood[];
+extern Gfx mat_organ_button_gold[];
+extern Gfx mat_revert_organ_button_gold[];
+extern Gfx organ_button_000_displaylist_mesh_layer_1[];

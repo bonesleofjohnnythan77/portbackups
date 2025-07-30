@@ -1,0 +1,14 @@
+extern const GeoLayout block_platform_geo[];
+extern u8 block_platform_rr_geo_0007A0_0x7012ed4_custom_rgba16_ci8[];
+extern u8 block_platform_rr_geo_0007A0_0x7012ed4_custom_rgba16_pal_rgba16[];
+extern u8 block_platform_rr_geo_0007A0_0x70136d4_custom_rgba16_ci8[];
+extern u8 block_platform_rr_geo_0007A0_0x70136d4_custom_rgba16_pal_rgba16[];
+extern Vtx block_platform_000_displaylist_mesh_layer_1_vtx_0[83];
+extern Gfx block_platform_000_displaylist_mesh_layer_1_tri_0[];
+extern Vtx block_platform_000_displaylist_mesh_layer_1_vtx_1[35];
+extern Gfx block_platform_000_displaylist_mesh_layer_1_tri_1[];
+extern Gfx mat_block_platform_wall[];
+extern Gfx mat_revert_block_platform_wall[];
+extern Gfx mat_block_platform_floor[];
+extern Gfx mat_revert_block_platform_floor[];
+extern Gfx block_platform_000_displaylist_mesh_layer_1[];

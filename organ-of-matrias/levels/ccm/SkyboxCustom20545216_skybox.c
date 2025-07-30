@@ -1,0 +1,119 @@
+#include "types.h"
+
+#include "make_const_nonconst.h"
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00000[] = "textures/skybox_tiles/SkyboxCustom20545216.0.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00001[] = "textures/skybox_tiles/SkyboxCustom20545216.1.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00002[] = "textures/skybox_tiles/SkyboxCustom20545216.2.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00003[] = "textures/skybox_tiles/SkyboxCustom20545216.3.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00004[] = "textures/skybox_tiles/SkyboxCustom20545216.4.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00005[] = "textures/skybox_tiles/SkyboxCustom20545216.5.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00006[] = "textures/skybox_tiles/SkyboxCustom20545216.6.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00007[] = "textures/skybox_tiles/SkyboxCustom20545216.7.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00008[] = "textures/skybox_tiles/SkyboxCustom20545216.8.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_00009[] = "textures/skybox_tiles/SkyboxCustom20545216.9.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_0000A[] = "textures/skybox_tiles/SkyboxCustom20545216.10.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_0000B[] = "textures/skybox_tiles/SkyboxCustom20545216.11.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_0000C[] = "textures/skybox_tiles/SkyboxCustom20545216.12.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_0000D[] = "textures/skybox_tiles/SkyboxCustom20545216.13.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_0000E[] = "textures/skybox_tiles/SkyboxCustom20545216.14.rgba16";
+
+ALIGNED8 static const Texture SkyboxCustom20545216_skybox_texture_0000F[] = "textures/skybox_tiles/SkyboxCustom20545216.15.rgba16";
+
+const Texture *const SkyboxCustom20545216_skybox_ptrlist[] = {
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00001,
+SkyboxCustom20545216_skybox_texture_00002,
+SkyboxCustom20545216_skybox_texture_00003,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00004,
+SkyboxCustom20545216_skybox_texture_00005,
+SkyboxCustom20545216_skybox_texture_00006,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00007,
+SkyboxCustom20545216_skybox_texture_00008,
+SkyboxCustom20545216_skybox_texture_00009,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_0000A,
+SkyboxCustom20545216_skybox_texture_0000B,
+SkyboxCustom20545216_skybox_texture_0000C,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_0000D,
+SkyboxCustom20545216_skybox_texture_0000E,
+SkyboxCustom20545216_skybox_texture_0000F,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+SkyboxCustom20545216_skybox_texture_00000,
+};
+

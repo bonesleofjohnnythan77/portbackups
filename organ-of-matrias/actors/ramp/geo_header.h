@@ -1,0 +1,12 @@
+extern const GeoLayout ramp_geo[];
+extern u8 ramp_rr_geo_000788_0x700f83c_custom_rgba16_i8[];
+extern u8 ramp__0302FF60_rgba16[];
+extern Vtx ramp_000_displaylist_mesh_layer_1_vtx_0[12];
+extern Gfx ramp_000_displaylist_mesh_layer_1_tri_0[];
+extern Vtx ramp_000_displaylist_mesh_layer_1_vtx_1[25];
+extern Gfx ramp_000_displaylist_mesh_layer_1_tri_1[];
+extern Gfx mat_ramp_ramp[];
+extern Gfx mat_revert_ramp_ramp[];
+extern Gfx mat_ramp_sides[];
+extern Gfx mat_revert_ramp_sides[];
+extern Gfx ramp_000_displaylist_mesh_layer_1[];
