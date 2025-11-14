@@ -1,5 +1,5 @@
--- name: \\#ff0000\\Kaizo \\#dcdcdc\\Mario 64
--- description: 
+-- name: \\#ff0000\\Kaizo \\#dcdcdc\\Mario 64 v1.1
+-- description: A hack made by OmegaEdge29 and Released in 2009, Kaizo Mario 64 is a romhack of the game that cranks up the difficulty by a brutal amount.\n\nIt fills every level with annoying enemies, deadly fire, and other kinds of dangerous traps. Even though the level geometry is the same, collecting all 120 stars is one HELL of a challenge.\n\nPorted by B. Bones Johnson
 -- incompatible: romhack
 
 gLevelValues.entryLevel = LEVEL_CASTLE_GROUNDS
@@ -46,10 +46,46 @@ local function bhv_collision_pad_loop(o)
     end
 end
 
+--- @param o Object
+local collisionTable = {
+    [0] = smlua_collision_util_get("bits_seg7_collision_0701AA84"),
+    [1] = smlua_collision_util_get("rr_seg7_collision_07029508"),
+}
 
--- Hook behavior
-id_bhvCollisionPad = hook_behavior(nil, OBJ_LIST_SURFACE, true, bhv_collision_pad_init, bhv_collision_pad_loop, "bhvCollisionSSLThing")
 
+local angleVelTable = {
+    [0] = 300,
+    [1] = -300,
+    [2] = 600,
+    [3] = -600,
+	[4] = 1400,
+}
+
+local function bhv_rotating_octagonal_plat_init(obj)
+
+	obj.oFlags = (OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)
+    local behParams = obj.oBehParams or 0
+
+
+    local collIndex = (behParams >> 16) & 0xFF
+    if collisionTable[collIndex] then
+        obj.collisionData = collisionTable[collIndex]
+    end
+
+
+    local velIndex = (behParams >> 24) & 0xFF
+    if angleVelTable[velIndex] then
+        obj.oAngleVelYaw = angleVelTable[velIndex]
+    else
+        obj.oAngleVelYaw = 0
+    end
+end
+
+local function bhv_rotating_octagonal_plat_loop(obj)
+	load_object_collision_model()
+
+    obj.oFaceAngleYaw = (obj.oFaceAngleYaw or 0) + (obj.oAngleVelYaw or 0)
+end
 
 -- Give 1 HP after bubble pop in Rainbow Ride only because FUCK YOU I AINT LETTING Y'ALL CHEESE THIS ONE WITH BUBBLES
 
@@ -68,3 +104,7 @@ function on_before_action(m)
 end
 
 hook_event(HOOK_BEFORE_SET_MARIO_ACTION, on_before_action)
+
+-- Hook behavior
+id_bhvCollisionPad = hook_behavior(nil, OBJ_LIST_SURFACE, true, bhv_collision_pad_init, bhv_collision_pad_loop, "bhvCollisionSSLThing")
+hook_behavior(id_bhvOctagonalPlatformRotating, OBJ_LIST_SURFACE, true, bhv_rotating_octagonal_plat_init, bhv_rotating_octagonal_plat_loop)

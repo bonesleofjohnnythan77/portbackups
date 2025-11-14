@@ -17,7 +17,7 @@
 #include "level_misc_macros.h"
 #include "macro_preset_names.h"
 static const MacroObject local_macro_objects_bits_1[] = {
-MACRO_OBJECT_WITH_BEH_PARAM(macro_box_one_coin,0,57536,6350,4,0),
+MACRO_OBJECT_WITH_BEH_PARAM(macro_box_one_coin,0,-8000,6350,4,0),
 MACRO_OBJECT_WITH_BEH_PARAM(macro_circling_amp,0,4150,64236,64211,2),
 MACRO_OBJECT_WITH_BEH_PARAM(macro_box_1up_running_away,0,2478,2300,64636,15),
 MACRO_OBJECT_WITH_BEH_PARAM(macro_circling_amp,0,4150,64236,63211,1),
@@ -187,6 +187,8 @@ OBJECT_WITH_ACTS(0,-1300,2750,-900,0,90,0,0x0, bhvFlamethrower
 OBJECT_WITH_ACTS(145,-8000,6550,4,0,0,0,0x0, bhvFlame
 ,31),
 OBJECT_WITH_ACTS(73,351,6652,-6030,0,0,0,0xb0000, bhvWarpPipe
+,31),
+OBJECT_WITH_ACTS(0,-8000,6400,4,0,0,0,0x0, id_bhvCollisionPad
 ,31),
 OBJECT_WITH_ACTS(0,-8000,7000,4,0,90,0,0xa0000, bhvAirborneWarp
 ,31),
