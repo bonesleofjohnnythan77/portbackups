@@ -1,0 +1,72 @@
+-- name: \\#a10000\\Red is Dead \\#ff0000\\Extreme
+-- description: The Extreme Edition of the Red is Dead romhack, It has 136 stars total, the hack is also in german.
+-- incompatible: romhack
+
+gLevelValues.entryLevel = LEVEL_VCUTM
+
+camera_set_use_course_specific_settings(0)
+camera_set_romhack_override(RCO_ALL)
+rom_hack_cam_set_collisions(0)
+camera_romhack_allow_centering(0)
+camera_romhack_allow_dpad_usage(1)
+camera_allow_toxic_gas_camera(1)
+gLevelValues.cellHeightLimit = 32767
+gLevelValues.floorLowerLimit = -32768
+gLevelValues.floorLowerLimitMisc = -31768
+gLevelValues.floorLowerLimitShadow = -31768
+gServerSettings.skipIntro = 1
+
+camera_set_use_course_specific_settings(false)
+
+smlua_audio_utils_replace_sequence(0x01, 0x22, 75, "01_Seq_custom")
+smlua_audio_utils_replace_sequence(0x02, 0x11, 75, "02_Seq_custom")
+smlua_audio_utils_replace_sequence(0x0B, 0x14, 75, "0B_Seq_custom")
+smlua_audio_utils_replace_sequence(0x0D, 0x16, 75, "0D_Seq_custom")
+smlua_audio_utils_replace_sequence(0x0E, 0x17, 75, "0E_Seq_custom")
+smlua_audio_utils_replace_sequence(0x0F, 0x18, 75, "0F_Seq_custom")
+smlua_audio_utils_replace_sequence(0x10, 0x12, 75, "10_Seq_custom")
+smlua_audio_utils_replace_sequence(0x12, 0x1F, 75, "12_Seq_custom")
+smlua_audio_utils_replace_sequence(0x14, 0x1A, 75, "14_Seq_custom")
+smlua_audio_utils_replace_sequence(0x15, 0x0E, 75, "15_Seq_custom")
+smlua_audio_utils_replace_sequence(0x16, 0x1B, 75, "16_Seq_custom")
+smlua_audio_utils_replace_sequence(0x17, 0x1A, 75, "17_Seq_custom")
+smlua_audio_utils_replace_sequence(0x1B, 0x14, 75, "1B_Seq_custom")
+smlua_audio_utils_replace_sequence(0x1C, 0x20, 75, "1C_Seq_custom")
+smlua_audio_utils_replace_sequence(0x1D, 0x1E, 75, "1D_Seq_custom")
+smlua_audio_utils_replace_sequence(0x1E, 0x1B, 75, "1E_Seq_custom")
+smlua_audio_utils_replace_sequence(0x1F, 0x1A, 75, "1F_Seq_custom")
+smlua_audio_utils_replace_sequence(0x20, 0x23, 75, "20_Seq_custom")
+smlua_audio_utils_replace_sequence(0x21, 0x24, 75, "21_Seq_custom")
+smlua_audio_utils_replace_sequence(0x23, 0x15, 75, "23_Seq_custom")
+smlua_audio_utils_replace_sequence(0x25, 0x11, 75, "25_Seq_custom")
+smlua_audio_utils_replace_sequence(0x27, 0x1C, 75, "27_Seq_custom")
+smlua_audio_utils_replace_sequence(0x28, 0x1A, 75, "28_Seq_custom")
+smlua_audio_utils_replace_sequence(0x2A, 0x0D, 75, "2A_Seq_custom")
+smlua_audio_utils_replace_sequence(0x31, 0x11, 75, "31_Seq_custom")
+smlua_audio_utils_replace_sequence(0x32, 0x0F, 75, "32_Seq_custom")
+smlua_audio_utils_replace_sequence(0x34, 0x11, 75, "34_Seq_custom")
+smlua_audio_utils_replace_sequence(0x37, 0x1B, 75, "37_Seq_custom")
+smlua_audio_utils_replace_sequence(0x38, 0x1D, 75, "38_Seq_custom")
+smlua_audio_utils_replace_sequence(0x39, 0x17, 75, "39_Seq_custom")
+smlua_audio_utils_replace_sequence(0x3A, 0x11, 75, "3A_Seq_custom")
+
+vec3f_set(gLevelValues.starPositions.KoopaBobStarPos, 3030, 4500, -4600)
+vec3f_set(gLevelValues.starPositions.KoopaThiStarPos, 7100, -1300, -6000)
+vec3f_set(gLevelValues.starPositions.KingBobombStarPos, -12307.0, 8385.0, 13445.0)
+vec3f_set(gLevelValues.starPositions.KingWhompStarPos, -2164.0, 6301.0, 1559.0)
+vec3f_set(gLevelValues.starPositions.EyerockStarPos, 0.0, -900.0, -3700.0)
+vec3f_set(gLevelValues.starPositions.BigBullyStarPos, 3900.0, -2580.0, -5848.0)
+vec3f_set(gLevelValues.starPositions.ChillBullyStarPos, 4113.0, 1500.0, 15502.0)
+vec3f_set(gLevelValues.starPositions.BigPiranhasStarPos, -2464.0, -7163.0, 9717.0)
+vec3f_set(gLevelValues.starPositions.TuxieMotherStarPos, -11961.0, -9755.0, -6836.0)
+vec3f_set(gLevelValues.starPositions.WigglerStarPos, 2232.0, -459.0, 1305.0)
+vec3f_set(gLevelValues.starPositions.PssSlideStarPos, 6161.0, -10000.0, -4721.0)
+vec3f_set(gLevelValues.starPositions.RacingPenguinStarPos, -7339.0, -5700.0, -6774.0)
+vec3f_set(gLevelValues.starPositions.TreasureChestStarPos, -1800.0, -2500.0, -1700.0)
+vec3f_set(gLevelValues.starPositions.GhostHuntBooStarPos, 980.0, 1100.0, 250.0)
+vec3f_set(gLevelValues.starPositions.KleptoStarPos, -5550.0, 300.0, -930.0)
+vec3f_set(gLevelValues.starPositions.MerryGoRoundStarPos, -1600.0, -2100.0, 205.0)
+vec3f_set(gLevelValues.starPositions.MrIStarPos, -3101.0, -4635.0, -7615.0)
+vec3f_set(gLevelValues.starPositions.BalconyBooStarPos, 700.0, 3200.0, 1900.0)
+vec3f_set(gLevelValues.starPositions.BigBullyTrioStarPos, -20287.0, -6614.0, -5554.0)
+

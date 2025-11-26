@@ -1,0 +1,50 @@
+smlua_text_utils_course_acts_replace(COURSE_BOB, (" 1 BULLYS HEIMAT"),	("BIG BULLY IM BULLYTURM"),	("DIE TOETLICHE WALZE"),	("DER GEFAEHRLICH ENGE DURCHGANG"),	("WANDERE AM RAND"),	("UNTER DIR IM LABYRINTH"),	("DIE GEHEIME LAVAEINBUCHTUNG"))
+
+smlua_text_utils_course_acts_replace(COURSE_WF, (" 2 WUMMPS AUFWAERMTRAINING"),	("KOENIG WUMMPS TRAINIGSSTUNDE"),	("DER HOECHSTE PUNKT"),	("AMPS LAVAPFAD "),	("PASST DU DA REIN ?"),	("DAS GEHEIMNISS DER \n\
+SCHWEBENDEN LAVA PLATTFORMEN"),	("DAS UNERREICHBARE BLUMENBEET"))
+
+smlua_text_utils_course_acts_replace(COURSE_JRB, (" 3 GOLDENER TREPPENLAUF"),	("UEBERWINDE DIE GEFAHREN"),	("ERKLIMME DIE GOLDENE WENDELTREPPE"),	("DER GOLDEN KREISLAUF DES LEBENS"),	("DER ENGE WANDSPRUNG"),	("ERKUNDE DEN AMP TURM"),	("GEH DER GEFAHR AUF DEN GRUND"))
+
+smlua_text_utils_course_acts_replace(COURSE_CCM, (" 4 DAS REICH DER AUGEN"),	("AUFWAERMUEBUNG MIT WANDSPRUENGEN"),	("WANDSPRUNGUEBUNG FUER ECHTE EXPERTEN"),	("FLIEGE ZU DEN KREITUERMEN"),	("DIE GEHEIMEN BAEUME"),	("GEHEIMER STERN VON MR I"),	("MR I WILL DICH SEHEN"))
+
+smlua_text_utils_course_acts_replace(COURSE_BBH, (" 5 PINGUIN PARADIES"),	("DER ERSTE AUFSTIEG"),	("TUXIE SUCHT IHRE MUTTER "),	("FOLGE DEN PFEIL"),	("EISIGE HERZTREPPE"),	("SEKRETS AUF DER TOETLICHEN WALZE"),	("GEHEIMNISS DER TREPPE"))
+
+smlua_text_utils_course_acts_replace(COURSE_HMC, (" 6 WELTRAUM"),	("GIFTGAS AUF DEM WEG INS ALL"),	("LAVAWANDSPRUENGE"),	("ERKUNDE DIE SCHWARZEN LOECHER"),	("EIN KOENIG IM ALL"),	("DIE GIFTIGE SCHRAEGE"),	("DER SCHATZ VON KOENIG BOB OMB"))
+
+smlua_text_utils_course_acts_replace(COURSE_LLL, (" 7 TURM DES SCHMERZES"),	("ERSTER AUFSTIEG "),	("AUF HALBER HOEHE"),	("DER SCHATZ DES KETTENHUNDES"),	("DAS GEHEIMNISS DES NEUEN TURMS"),	("EIN UMWEG WIRD BELOHNT"),	("KOMM BIS GANZ NACH OBEN"))
+
+smlua_text_utils_course_acts_replace(COURSE_SSL, (" 8 EISIGE WUESTE"),	("EISKALTES $ SPRINGEN"),	("WEITSPRINGEN MIT GEFAHREN"),	("POKEYS WANDERWEG"),	("METALLKAPPENLAUF"),	("FOLGE DEN BLAUEN $"),	("DER IRREFUEHRENDE PFEIL"))
+
+smlua_text_utils_course_acts_replace(COURSE_DDD, (" 9 OPTISCHE TAEUSCHUNGEN"),	("ERKLIMME DEN ILLUSIONSTURM"),	("PERFEKTES WANDSPRINGEN"),	("PFAD DER ILLUSIONEN"),	("KREISE DER ILLUSION"),	("5 GEHEIME ILLUSIONEN"),	("FLUGSTUNDE AM GIPFEL"))
+
+smlua_text_utils_course_acts_replace(COURSE_SL, ("10 WIGGLERS LAVADORF"),	("ERKLIMME DIE WAND"),	("GEHEIME BLAUE MUENZEN"),	("WIGGLERS RACHE"),	("WIGGLERS NEUES STERNENVERSTECK"),	("DER WANDSPRUNGPARCOUR"),	("LAVAMUENZSPRINGEN AM AUSSICHTSPUNKT"))
+
+smlua_text_utils_course_acts_replace(COURSE_WDW, ("11 MARIOS TRAINIGSGELAENDE"),	("AUFWAERMTRAINING"),	("HERZKLOPFEN AM STEILHANG"),	("5 FEUERSPEIER IN DEN GRUBEN"),	("DER ZWEITE TURM"),	("ABGERUNDETE FEUERTREPPE"),	("WANDSPRUNGTRAINING DELUXE"))
+
+smlua_text_utils_course_acts_replace(COURSE_TTM, ("12 HOELLENSPFAD"),	("HOELLEN LOCH"),	("HOELLEN HALBKREISTREPPE"),	("HOELLEN STUFEN"),	("TEUFLISCHES X"),	("TEUFLISCHES SPINNENNETZ"),	("TEUFLISCHE RUTSCHE"))
+
+smlua_text_utils_course_acts_replace(COURSE_THI, ("13 DIE MILLIARDENSTADT"),	("GEHEIMNISSE BEI DEN KETTENHUNDEN"),	("EIN UNSICHTBSARER RAUM "),	("ERKUNDE DEN AUSSENBEREICH"),	("2 FAERBIGES DACH"),	("UNDICHTES HAUS"),	("DAS HALBE HAUS"))
+
+smlua_text_utils_course_acts_replace(COURSE_TTC, ("14 EISBULLYS INSEL"),	("EIS BULLY WILLS WISSEN"),	("ERREICHE DEN HOECHSTEN PUNKT"),	("EISWANDSPRUNG IST GEFRAGT"),	("LASS DIE METALLKAPPE NICHT AUSGEHN"),	("IN DER MITTE DES KREISES"),	("PANZERFAHRT IM WASSERLABYRINTH"))
+
+smlua_text_utils_course_acts_replace(COURSE_RR, ("15 DIE ALLERLETZTE PRUEFUNG"),	("SCHWIMM UM DEIN LEBEN"),	("FOLGE DEN ROTEN MUENZEN"),	("VERSCHOLLEN IM \n\
+UNTERWASSERLABYRINTH"),	("GEHEIME STELLEN IM LABYRINTH"),	("ENDLICH AN LAND"),	("ZIEL"))
+
+smlua_text_utils_secret_star_replace(15 + 1, ("   BOWSERS WUESTENGEBIET"))
+smlua_text_utils_secret_star_replace(16 + 1, ("   BOWSERS FEURIGES REICH "))
+smlua_text_utils_secret_star_replace(17 + 1, ("   SIEH ZU UND STAUNE"))
+smlua_text_utils_secret_star_replace(18 + 1, ("   GEFAEHRLICHE RUTSCHE"))
+smlua_text_utils_secret_star_replace(19 + 1, ("   SANDIGE FEUERECHSE"))
+smlua_text_utils_secret_star_replace(20 + 1, ("   GOOMBAS INSEL"))
+smlua_text_utils_secret_star_replace(21 + 1, ("   BLACKSHADOWDRYBONES"))
+smlua_text_utils_secret_star_replace(22 + 1, ("   JASMINS WASSERLANDSCHAFT"))
+smlua_text_utils_secret_star_replace(23 + 1, ("   BULLIES SPORTPLATZ"))
+smlua_text_utils_secret_star_replace(24 + 1, (""))
+smlua_text_utils_castle_secret_stars_replace(("   EXTREME STERNE"))
+smlua_text_utils_extra_text_replace(0,("EIN EXTREMER STERN"))
+smlua_text_utils_extra_text_replace(1,(""))
+smlua_text_utils_extra_text_replace(2,(""))
+smlua_text_utils_extra_text_replace(3,(""))
+smlua_text_utils_extra_text_replace(4,(""))
+smlua_text_utils_extra_text_replace(5,(""))
+smlua_text_utils_extra_text_replace(6,(""))

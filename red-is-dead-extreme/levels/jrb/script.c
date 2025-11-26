@@ -1,0 +1,547 @@
+#include <ultra64.h>
+#include "sm64.h"
+#include "behavior_data.h"
+#include "model_ids.h"
+#include "seq_ids.h"
+#include "dialog_ids.h"
+#include "segment_symbols.h"
+#include "level_commands.h"
+#include "game/level_update.h"
+#include "levels/scripts.h"
+#include "actors/common1.h"
+#include "make_const_nonconst.h"
+
+#include "areas/1/custom.model.inc.h"
+#include "levels/jrb/header.h"
+extern u8 _jrb_segment_ESegmentRomStart[]; 
+extern u8 _jrb_segment_ESegmentRomEnd[];
+const LevelScript level_jrb_entry[] = {
+INIT_LEVEL(),
+LOAD_MIO0(0x07, _jrb_segment_7SegmentRomStart, _jrb_segment_7SegmentRomEnd),
+LOAD_RAW(0x1A, _jrbSegmentRomStart, _jrbSegmentRomEnd),
+LOAD_RAW(0x0E, _jrb_segment_ESegmentRomStart, _jrb_segment_ESegmentRomEnd),
+LOAD_MIO0(0xA,_water_skybox_mio0SegmentRomStart,_water_skybox_mio0SegmentRomEnd),
+LOAD_MIO0(8,_common0_mio0SegmentRomStart,_common0_mio0SegmentRomEnd),
+LOAD_RAW(15,_common0_geoSegmentRomStart,_common0_geoSegmentRomEnd),
+LOAD_MIO0(5,_group1_mio0SegmentRomStart,_group1_mio0SegmentRomEnd),
+LOAD_RAW(12,_group1_geoSegmentRomStart,_group1_geoSegmentRomEnd),
+LOAD_MIO0(6,_group17_mio0SegmentRomStart,_group17_mio0SegmentRomEnd),
+LOAD_RAW(13,_group17_geoSegmentRomStart,_group17_geoSegmentRomEnd),
+ALLOC_LEVEL_POOL(),
+MARIO(/*model*/ MODEL_MARIO, /*behParam*/ 0x00000001, /*beh*/ bhvMario),
+LOAD_MODEL_FROM_GEO(MODEL_JRB_SHIP_LEFT_HALF_PART,  jrb_geo_000978),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_SHIP_BACK_LEFT_PART,  jrb_geo_0009B0),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_SHIP_RIGHT_HALF_PART, jrb_geo_0009E8),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_SHIP_BACK_RIGHT_PART, jrb_geo_000A00),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_SUNKEN_SHIP,          jrb_geo_000990),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_SUNKEN_SHIP_BACK,     jrb_geo_0009C8),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_ROCK,                 jrb_geo_000930),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_SLIDING_BOX,          jrb_geo_000960),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_FALLING_PILLAR,       jrb_geo_000900),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_FALLING_PILLAR_BASE,  jrb_geo_000918),
+    LOAD_MODEL_FROM_GEO(MODEL_JRB_FLOATING_PLATFORM,    jrb_geo_000948),
+LOAD_MODEL_FROM_GEO(1, mario_geo
+),
+LOAD_MODEL_FROM_GEO(22, warp_pipe_geo
+),
+LOAD_MODEL_FROM_GEO(23, bubbly_tree_geo
+),
+LOAD_MODEL_FROM_GEO(24, spiky_tree_geo
+),
+LOAD_MODEL_FROM_GEO(25, snow_tree_geo
+),
+LOAD_MODEL_FROM_GEO(27, palm_tree_geo
+),
+LOAD_MODEL_FROM_GEO(31, metal_door_geo
+),
+LOAD_MODEL_FROM_GEO(32, hazy_maze_door_geo
+),
+LOAD_MODEL_FROM_GEO(34, castle_door_0_star_geo
+),
+LOAD_MODEL_FROM_GEO(35, castle_door_1_star_geo
+),
+LOAD_MODEL_FROM_GEO(36, castle_door_3_stars_geo
+),
+LOAD_MODEL_FROM_GEO(37, key_door_geo
+),
+LOAD_MODEL_FROM_GEO(38, castle_door_geo
+),
+LOAD_MODEL_FROM_GEO(116, yellow_coin_geo
+),
+LOAD_MODEL_FROM_GEO(117, yellow_coin_no_shadow_geo
+),
+LOAD_MODEL_FROM_GEO(118, blue_coin_geo
+),
+LOAD_MODEL_FROM_GEO(119, blue_coin_no_shadow_geo
+),
+LOAD_MODEL_FROM_GEO(120, heart_geo
+),
+LOAD_MODEL_FROM_GEO(121, transparent_star_geo
+),
+LOAD_MODEL_FROM_GEO(122, star_geo
+),
+LOAD_MODEL_FROM_GEO(124, wooden_signpost_geo
+),
+LOAD_MODEL_FROM_GEO(127, cannon_barrel_geo
+),
+LOAD_MODEL_FROM_GEO(128, cannon_base_geo
+),
+LOAD_MODEL_FROM_GEO(129, breakable_box_geo
+),
+LOAD_MODEL_FROM_GEO(130, breakable_box_small_geo
+),
+LOAD_MODEL_FROM_GEO(131, exclamation_box_outline_geo
+),
+// LOAD_MODEL_FROM_DL(132,0x08025f08,4),
+LOAD_MODEL_FROM_GEO(133, marios_winged_metal_cap_geo
+),
+LOAD_MODEL_FROM_GEO(134, marios_metal_cap_geo
+),
+LOAD_MODEL_FROM_GEO(135, marios_wing_cap_geo
+),
+LOAD_MODEL_FROM_GEO(136, marios_cap_geo
+),
+LOAD_MODEL_FROM_GEO(137, exclamation_box_geo
+),
+LOAD_MODEL_FROM_GEO(138, dirt_animation_geo
+),
+LOAD_MODEL_FROM_GEO(139, cartoon_star_geo
+),
+LOAD_MODEL_FROM_GEO(140, blue_coin_switch_geo
+),
+LOAD_MODEL_FROM_GEO(142, mist_geo
+),
+LOAD_MODEL_FROM_GEO(143, sparkles_animation_geo
+),
+LOAD_MODEL_FROM_GEO(144, red_flame_geo
+),
+LOAD_MODEL_FROM_GEO(145, blue_flame_geo
+),
+LOAD_MODEL_FROM_GEO(148, burn_smoke_geo
+),
+LOAD_MODEL_FROM_GEO(149, sparkles_geo
+),
+LOAD_MODEL_FROM_GEO(150, smoke_geo
+),
+LOAD_MODEL_FROM_GEO(156, burn_smoke_geo
+),
+// LOAD_MODEL_FROM_DL(158,0x0302c8a0,4),
+// LOAD_MODEL_FROM_DL(159,0x0302bcd0,4),
+LOAD_MODEL_FROM_GEO(160, white_particle_geo
+),
+// LOAD_MODEL_FROM_DL(161,0x0301cb00,4),
+LOAD_MODEL_FROM_GEO(162, leaves_geo
+),
+LOAD_MODEL_FROM_GEO(163, wave_trail_geo
+),
+// LOAD_MODEL_FROM_DL(164,0x04032a18,4),
+LOAD_MODEL_FROM_GEO(165, small_water_splash_geo
+),
+LOAD_MODEL_FROM_GEO(166, idle_water_wave_geo
+),
+LOAD_MODEL_FROM_GEO(167, water_splash_geo
+),
+LOAD_MODEL_FROM_GEO(168, bubble_geo
+),
+LOAD_MODEL_FROM_GEO(170, purple_marble_geo
+),
+LOAD_MODEL_FROM_GEO(180, bowling_ball_geo
+),
+LOAD_MODEL_FROM_GEO(185, fish_geo
+),
+LOAD_MODEL_FROM_GEO(186, fish_shadow_geo
+),
+LOAD_MODEL_FROM_GEO(187, butterfly_geo
+),
+LOAD_MODEL_FROM_GEO(188, black_bobomb_geo
+),
+LOAD_MODEL_FROM_GEO(190, koopa_shell_geo
+),
+LOAD_MODEL_FROM_GEO(192, goomba_geo
+),
+LOAD_MODEL_FROM_GEO(194, amp_geo
+),
+LOAD_MODEL_FROM_GEO(195, bobomb_buddy_geo
+),
+LOAD_MODEL_FROM_GEO(200, bowser_key_cutscene_geo
+),
+// LOAD_MODEL_FROM_DL(201,0x080048e0,4),
+LOAD_MODEL_FROM_GEO(202, checkerboard_platform_geo
+),
+LOAD_MODEL_FROM_GEO(203, red_flame_shadow_geo
+),
+LOAD_MODEL_FROM_GEO(204, bowser_key_geo
+),
+LOAD_MODEL_FROM_GEO(205, explosion_geo
+),
+LOAD_MODEL_FROM_GEO(212, mushroom_1up_geo
+),
+LOAD_MODEL_FROM_GEO(215, red_coin_geo
+),
+LOAD_MODEL_FROM_GEO(216, red_coin_no_shadow_geo
+),
+LOAD_MODEL_FROM_GEO(217, metal_box_geo
+),
+// LOAD_MODEL_FROM_DL(218,0x08024bb8,4),
+LOAD_MODEL_FROM_GEO(219, number_geo
+),
+LOAD_MODEL_FROM_GEO(220, flyguy_geo
+),
+LOAD_MODEL_FROM_GEO(223, chuckya_geo
+),
+LOAD_MODEL_FROM_GEO(224, white_puff_geo
+),
+LOAD_MODEL_FROM_GEO(225, bowling_ball_track_geo
+),
+JUMP_LINK(script_func_global_1),
+JUMP_LINK(script_func_global_2),
+JUMP_LINK(script_func_global_18),
+JUMP_LINK(local_area_jrb_1_),
+FREE_LEVEL_POOL(),
+MARIO_POS(1,135,-6558,0,6464),
+CALL(/*arg*/ 0, /*func*/ lvl_init_or_update),
+CALL_LOOP(/*arg*/ 1, /*func*/ lvl_init_or_update),
+CLEAR_LEVEL(),
+SLEEP_BEFORE_EXIT(/*frames*/ 1),
+EXIT(),
+};
+const LevelScript local_area_jrb_1_[] = {
+AREA(1,Geo_jrb_1_0x1d01700),
+TERRAIN(col_jrb_1_0xe054ae8),
+SET_BACKGROUND_MUSIC(0,0),
+TERRAIN_TYPE(0),
+JUMP_LINK(local_objects_jrb_1_),
+JUMP_LINK(local_warps_jrb_1_),
+END_AREA(),
+RETURN()
+};
+const LevelScript local_objects_jrb_1_[] = {
+OBJECT_WITH_ACTS(0,7714,-8717,24592,0,0,0,0xa0000, bhvSpinAirborneWarp
+,63),
+OBJECT_WITH_ACTS(0,8581,-8984,24971,-2,0,0,0xb0000, bhvFadingWarp
+,60),
+OBJECT_WITH_ACTS(0,-4224,-10488,-5724,0,-153,0,0xc0000, bhvFadingWarp
+,60),
+OBJECT_WITH_ACTS(0,-3443,-10382,-4300,0,93,0,0xd0000, bhvFadingWarp
+,56),
+OBJECT_WITH_ACTS(0,-1325,13893,-633,0,-151,0,0xe0000, bhvFadingWarp
+,56),
+OBJECT_WITH_ACTS(122,6332,15454,-1060,-2,0,0,0x2000000, bhvStar
+,63),
+OBJECT_WITH_ACTS(195,7653,-8959,25353,-2,0,0,0x40000, bhvBobombBuddy
+,62),
+OBJECT_WITH_ACTS(116,8598,-9010,24965,-2,0,0,0x0, bhvYellowCoin
+,62),
+OBJECT_WITH_ACTS(122,2172,-1510,15771,-2,0,0,0x5000000, bhvStar
+,63),
+OBJECT_WITH_ACTS(122,1325,8802,1926,-2,0,0,0x1000000, bhvStar
+,63),
+OBJECT_WITH_ACTS(122,-8795,6979,-7765,-2,0,0,0x3000000, bhvStar
+,63),
+OBJECT_WITH_ACTS(122,-834,14011,-16477,-2,0,0,0x4000000, bhvStar
+,63),
+OBJECT_WITH_ACTS(122,475,2135,11518,-2,0,0,0x0, bhvStar
+,1),
+OBJECT_WITH_ACTS(194,-166,19479,-14735,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-144,19323,-13812,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-128,19323,-13268,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-338,19115,-14295,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-367,19115,-15128,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-2,19010,-15128,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,18,18906,-14293,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-19,18802,-12931,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,114,18542,-13204,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,122,18437,-14303,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,140,18333,-15297,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-422,18281,-14937,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-585,18021,-14379,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-580,18021,-15425,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,303,17917,-15364,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,272,17812,-14480,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,343,17812,-13335,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-13,17656,-12648,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-592,17552,-12836,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-787,17552,-13924,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-771,17448,-14966,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-220,17396,-15611,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-788,17396,-15483,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,463,17396,-15492,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,457,17187,-14254,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,481,17083,-13083,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,164,16771,-12337,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,688,16719,-12504,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,582,16719,-13973,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,591,16458,-14860,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,347,16250,-15761,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-907,16198,-15744,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-960,16198,-14235,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-878,16094,-13606,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-899,16094,-12982,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-912,16094,-12617,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-402,15989,-12305,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,744,15833,-12253,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,721,15729,-13088,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,749,15417,-14234,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,705,15417,-15856,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-701,15417,-15902,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-22,15417,-15907,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-1157,14896,-15359,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-1097,15208,-15460,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(137,-1970,14635,-16503,-1,-65,-1,0x60000, bhvExclamationBox
+,63),
+OBJECT_WITH_ACTS(137,-821,14583,-16567,-1,-65,-1,0x60000, bhvExclamationBox
+,63),
+OBJECT_WITH_ACTS(137,-40,14583,-16539,-1,-65,-1,0x60000, bhvExclamationBox
+,63),
+OBJECT_WITH_ACTS(194,876,14479,-15593,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,898,14479,-14805,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,860,14479,-14442,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,866,14479,-14191,-1,-65,-1,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(192,-487,13958,-915,-1,-65,-1,0x10000, bhvGoomba
+,63),
+OBJECT_WITH_ACTS(192,221,10000,-8473,-1,-65,-1,0x10000, bhvGoomba
+,63),
+OBJECT_WITH_ACTS(89,1014,10417,-7254,-2,-70,-18,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,1158,10938,-6874,-2,-70,-18,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,1288,10938,-5879,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,5266,15261,-1005,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,3846,15261,-945,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,2705,15000,-980,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,2275,14844,-956,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,1200,14636,-1077,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,-5071,6747,-8284,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,-5541,6747,-7797,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,-5920,6268,-7113,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(89,-6169,6268,-6465,-3,-81,-3,0x0, bhvHeaveHo
+,63),
+OBJECT_WITH_ACTS(217,-7608,13229,-4799,-3,-81,-3,0x0, bhvPushableMetalBox
+,63),
+OBJECT_WITH_ACTS(217,-7307,13229,-4841,-3,-81,-3,0x0, bhvPushableMetalBox
+,63),
+OBJECT_WITH_ACTS(217,-6996,13229,-4778,-3,-81,-3,0x0, bhvPushableMetalBox
+,63),
+OBJECT_WITH_ACTS(217,-6684,13229,-4789,-3,-81,-3,0x0, bhvPushableMetalBox
+,63),
+OBJECT_WITH_ACTS(180,5323,15416,-877,-3,-81,-3,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,4372,15416,-895,-3,-81,-3,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,3920,15416,-915,-3,-81,-3,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,3461,15208,-879,-3,-81,-3,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,2940,15000,-819,-3,-81,-3,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,2380,15000,-963,-3,-81,-3,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(137,615,15000,-797,-3,-96,-3,0x60000, bhvExclamationBox
+,63),
+OBJECT_WITH_ACTS(206,-6094,6459,-5233,0,-333,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(206,-1204,13646,-2106,0,-203,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(206,418,12240,-3437,0,-203,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(206,-2102,8334,-9442,0,-79,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(206,-4785,5521,-2859,0,82,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(206,-3020,4271,-2610,0,160,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(206,-5780,1302,-6598,0,160,0,0x0, bhvSnufit
+,63),
+OBJECT_WITH_ACTS(192,-4089,0,-8855,0,0,0,0x10000, bhvGoomba
+,63),
+OBJECT_WITH_ACTS(192,-1354,-1094,-9092,0,0,0,0x10000, bhvGoomba
+,63),
+OBJECT_WITH_ACTS(194,-5437,-4531,-5945,0,0,0,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-549,-3594,-8029,0,0,0,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(194,-5744,1667,-6667,0,0,0,0x0, bhvHomingAmp
+,63),
+OBJECT_WITH_ACTS(220,1310,2657,1229,0,0,0,0x10000, bhvFlyGuy
+,63),
+OBJECT_WITH_ACTS(220,87,3698,1422,0,0,0,0x10000, bhvFlyGuy
+,63),
+OBJECT_WITH_ACTS(220,765,2240,10093,0,0,0,0x10000, bhvFlyGuy
+,63),
+OBJECT_WITH_ACTS(0,367,2031,11287,0,0,0,0x10000, bhvGoombaTripletSpawner
+,63),
+OBJECT_WITH_ACTS(0,2743,-3177,11319,0,0,0,0x10000, bhvGoombaTripletSpawner
+,63),
+OBJECT_WITH_ACTS(137,7326,-8802,25124,0,0,0,0x30000, bhvExclamationBox
+,63),
+OBJECT_WITH_ACTS(140,7342,-8959,24881,0,0,0,0x0, bhvBlueCoinSwitch
+,63),
+OBJECT_WITH_ACTS(118,1504,-8854,24428,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(223,-3306,-4632,15672,0,0,0,0x0, bhvChuckya
+,63),
+OBJECT_WITH_ACTS(118,12,-8854,24434,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(118,-1079,-8854,24406,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(118,-2745,-8854,24340,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(118,3649,-8854,24414,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(118,2830,-8854,24434,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(118,-1892,-8854,24460,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(223,1888,-4136,8566,0,0,0,0x0, bhvChuckya
+,63),
+OBJECT_WITH_ACTS(118,4553,-8854,24399,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(118,5590,-8854,24483,0,0,0,0x0, bhvHiddenBlueCoin
+,63),
+OBJECT_WITH_ACTS(180,2371,-2136,14302,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(212,-3424,-10364,-4311,0,0,0,0x0, bhv1Up
+,56),
+OBJECT_WITH_ACTS(180,4296,-2344,12734,0,-17,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,3975,-2396,13960,0,-17,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,4367,-2344,13408,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,289,2031,13163,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-1103,1563,12698,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-2506,1563,12498,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-2973,521,14207,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-2711,885,13533,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-620,573,14414,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-1315,156,15685,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-863,156,16507,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-449,-313,17661,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,286,-1146,15790,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,1445,-1510,14697,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,1865,-1250,15663,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,2748,-1667,15111,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,5006,-2500,13515,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-1071,-5052,18229,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,5464,-5469,15158,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,5061,-5833,11266,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,4866,-6198,10466,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,6673,-6510,12443,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,5737,-6510,15484,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,2715,-6771,17053,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,1417,-6875,18658,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-1184,-6875,19038,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-3086,-7240,16615,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-4979,-7240,14745,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-5270,-7240,12547,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-3149,-7604,10755,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,-750,-7604,9695,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(180,1527,-7604,8236,0,0,0,0x0, bhvFireSpitter
+,63),
+OBJECT_WITH_ACTS(122,-569,20469,-12326,0,0,0,0x4000000, bhvStar
+,63),
+RETURN()
+};
+const LevelScript local_warps_jrb_1_[] = {
+WARP_NODE(10,9,1,10,0),
+WARP_NODE(11,12,1,12,0),
+WARP_NODE(12,12,1,11,0),
+WARP_NODE(13,12,1,14,0),
+WARP_NODE(14,12,1,13,0),
+WARP_NODE(240,18,1,240,0),
+WARP_NODE(241,18,1,241,0),
+WARP_NODE(0,9,1,10,0),
+WARP_NODE(1,9,1,10,0),
+WARP_NODE(2,9,1,10,0),
+WARP_NODE(3,9,1,10,0),
+WARP_NODE(4,9,1,10,0),
+WARP_NODE(5,9,1,10,0),
+WARP_NODE(6,9,1,10,0),
+RETURN()
+};
