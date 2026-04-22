@@ -1,0 +1,20 @@
+Movtex castle_grounds_area_1_movtex_tris_07011750[] = {
+    MOV_TEX_SPD(70),
+    MOV_TEX_TRIS(-4469, -800, -6413, 0, 0),
+    MOV_TEX_TRIS(-5525, 1171, -7026, 2, 0),
+    MOV_TEX_TRIS(-6292, 2028, -7463, 4, 0),
+    MOV_TEX_TRIS(-7302, 2955, -7461, 6, 0),
+    MOV_TEX_TRIS(-4883, -800, -5690, 0, 3),
+    MOV_TEX_TRIS(-5547, 1110, -6097, 2, 3),
+    MOV_TEX_TRIS(-6732, 2587, -6770, 4, 3),
+    MOV_TEX_TRIS(-7603, 3004, -7160, 6, 3),
+    MOV_TEX_TRIS(-5580, -800, -4740, 0, 6),
+    MOV_TEX_TRIS(-6205, 1068, -5347, 2, 6),
+    MOV_TEX_TRIS(-7249, 2566, -6192, 4, 6),
+    MOV_TEX_TRIS(-6895, -800, -4714, 0, 9),
+    MOV_TEX_TRIS(-7201, 1083, -5071, 2, 9),
+    MOV_TEX_TRIS(-7578, 2042, -5766, 4, 9),
+    MOV_TEX_TRIS(-8132, 2961, -6761, 6, 9),
+    MOV_TEX_END(),
+};
+
