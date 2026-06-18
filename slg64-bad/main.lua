@@ -1,5 +1,5 @@
 -- name: Super Luigi Galaxy 64 DEMO 2.0b
--- description: Extracted with rom-decomp-64.
+-- description: Extracted with rom-decomp-64.\n\nHack by Mario42 Gls42.\n\nPorted by B. Bones Johnson
 -- incompatible: romhack
 
 gLevelValues.fixCollisionBugs = true
