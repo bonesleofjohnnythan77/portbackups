@@ -1,0 +1,11 @@
+gBehaviorValues.KingBobombFVel = 3.0
+gBehaviorValues.KingBobombYawVel = 256
+gBehaviorValues.KingBobombHealth = 8
+gBehaviorValues.KingWhompHealth = 3
+gBehaviorValues.KoopaThiAgility = 6.0
+gBehaviorValues.KoopaBobAgility = 4.0
+gBehaviorValues.MipsStar1Requirement = 0
+gBehaviorValues.MipsStar2Requirement = 0
+gBehaviorValues.ToadStar1Requirement = 12
+gBehaviorValues.ToadStar2Requirement = 25
+gBehaviorValues.ToadStar3Requirement = 35
