@@ -2,7 +2,7 @@
 -- description: Extracted with rom-decomp-64.
 -- incompatible: romhack
 
-
+gLevelValues.fixCollisionBugs = true
 gLevelValues.cellHeightLimit = 32767
 gLevelValues.floorLowerLimit = -32768
 gLevelValues.floorLowerLimitMisc = -31768
