@@ -1,0 +1,14 @@
+extern const GeoLayout travis_metal_cap_Metal_Cap_State_Switch_opt1[];
+extern const GeoLayout travis_metal_cap_Metal_Cap_State_Switch_opt2[];
+extern const GeoLayout travis_metal_cap_Metal_Cap_State_Switch_opt3[];
+extern const GeoLayout travis_metal_cap_geo[];
+extern u8 travis_metal_cap_mario_metal_rgba16[];
+extern u8 travis_metal_cap_Metal_Shade_rgba16_rgba16[];
+extern Vtx travis_metal_cap_Metal_Cap_DL_mesh_layer_1_vtx_0[235];
+extern Gfx travis_metal_cap_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_travis_metal_cap_metal[];
+extern Gfx mat_revert_travis_metal_cap_metal[];
+extern Gfx mat_travis_metal_cap_Metal__METAL__001[];
+extern Gfx mat_revert_travis_metal_cap_Metal__METAL__001[];
+extern Gfx travis_metal_cap_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx travis_metal_cap_Metal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__001_0[];
